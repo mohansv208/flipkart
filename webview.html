@@ -124,8 +124,8 @@
         .form-checkbox,
         .form-radio {
             position: relative;
-            margin-top: 2.25rem;
-            margin-bottom: 2.25rem;
+            /* margin-top: 2.25rem; */
+            margin-bottom: 1rem;
             text-align: left;
         }
 
@@ -291,7 +291,7 @@
             position: relative;
             display: -ms-flexbox;
             display: flex;
-            margin-top: 2.25rem;
+            /* margin-top: 1rem; */
         }
 
         .form-actions::before {
@@ -310,7 +310,7 @@
         }
 
         .form-fieldset {
-            padding: 30px;
+            /* padding: 30px; */
             border: 0;
         }
 
@@ -331,8 +331,8 @@
 
         .form-element {
             position: relative;
-            margin-top: 2.25rem;
-            margin-bottom: 2.25rem;
+            /* margin-top: 2.25rem; */
+            margin-bottom: 1rem;
         }
 
         .form-element-hint {
@@ -523,7 +523,7 @@
 </head>
 
 <body>
-    <div id="custom" class="container mt-3">
+    <div id="custom" class="container mt-1">
         <div id="info">
             <strong>Please fill the below details.</strong>
         </div>
@@ -751,9 +751,9 @@
                     values[name] = value;
                 }
             }
-            let formStatus =true;
-            for (let key of Object.keys(values)){
-                if(!values[key]){
+            let formStatus = true;
+            for (let key of Object.keys(values)) {
+                if (!values[key]) {
                     formStatus = false
                     break
                 }
@@ -777,7 +777,7 @@
                     $(this).find(':input').attr('disabled', 'disabled');
                 });
             }
-            else{
+            else {
                 document.getElementById('info').innerHTML = `<span style='color:red;'>Please fill all the fields</span>`;
                 document.getElementById('info').style.display = 'block';
             }
